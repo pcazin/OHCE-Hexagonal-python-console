@@ -1,1 +1,1 @@
-# OHCE hexagonal pythopn console
+# OHCE hexagonal python console (prototype)
