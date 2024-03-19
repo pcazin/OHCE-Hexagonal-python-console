@@ -5,7 +5,13 @@ from app_class.MirrorApp import MirrorApp
 
 def main():
     translator = Translator('languages.json')
-    lang = input("Choose a language (English/French): ").lower()
+    lang = ""
+
+    while lang not in list(translator.languages.keys()):
+        primary_keys = [key for key in translator.languages.keys()]
+        formatted_keys = "/".join(primary_keys)  
+        lang = input(f"Choose a language ({formatted_keys}) ")
+
     app = MirrorApp(translator)
     app.run(lang)
 
