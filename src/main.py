@@ -10,7 +10,7 @@ def main():
     while lang not in list(translator.languages.keys()):
         primary_keys = [key for key in translator.languages.keys()]
         formatted_keys = "/".join(primary_keys)  
-        lang = input(f"Choose a language ({formatted_keys}) ")
+        lang = input(f"Choose a language in the list ({formatted_keys}) ")
 
     app = MirrorApp(translator)
     app.run(lang)
